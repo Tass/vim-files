@@ -12,4 +12,11 @@ task(:submodules) do
   system "git submodule update"
 end
 
-task(:install, :symlinks, :submodules)
+task(:command_t) do
+  Dir.chdir("bundle/command-t/ruby/command-t") do
+    system "ruby extconf.rb"
+    system "make"
+  end
+end
+
+task(:install, :symlinks, :submodules, :command_t)
