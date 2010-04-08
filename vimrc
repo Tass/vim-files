@@ -80,6 +80,11 @@ autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 
 autocmd FileType ruby set iskeyword+=?,!
 
+" Improved maps for completion
+inoremap <expr> <Down> pumvisible() ? "\<C-n>" : "\<Down>"
+inoremap <expr> <Up> pumvisible() ? "\<C-p>" : "\<Up>"
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
+
 let NERDTreeHijackNetrw=1
 
 let g:AutoComplPop_IgnoreCaseOption = 0
