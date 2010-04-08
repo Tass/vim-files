@@ -3,7 +3,7 @@
 exp = File.method(:expand_path)
 
 task(:symlinks) do
-  File.symlink(exp.call("vimrc"), exp.call("~/.vimrc"))
+  File.symlink(exp.call("vimrc"), exp.call("~/.vimrc")) unless File.exists?(exp.call("~/.vimrc"))
   File.symlink(exp.call("."), exp.call("~/.vim")) unless File.exists?(exp.call("~/.vim"))
 end
 
