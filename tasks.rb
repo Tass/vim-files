@@ -9,10 +9,7 @@ end
 
 task(:submodules) do
   system "git submodule init"
-end
-
-task(:update) do
   system "git submodule update"
 end
 
-task(:install, :symlinks, :submodules, :update)
+task(:install, :symlinks, :submodules)
