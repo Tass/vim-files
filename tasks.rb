@@ -3,8 +3,18 @@
 exp = File.method(:expand_path)
 
 task(:symlinks) do
-  File.symlink(exp.call("vimrc"), exp.call("~/.vimrc")) unless File.exists?(exp.call("~/.vimrc"))
-  File.symlink(exp.call("."), exp.call("~/.vim")) unless File.exists?(exp.call("~/.vim"))
+  ["gvimrc", "vimrc"].each do |rc|
+    if File.exists?(exp.call("~/.#{rc}"))
+      puts "~./#{rc} exists."
+    else
+      File.symlink(exp.call(rc), exp.call("~/.#{rc}"))
+    end
+  end
+  if File.exists?(exp.call("~/.vim"))
+    puts "~/.vim exists"
+  else
+    File.symlink(exp.call("."), exp.call("~/.vim"))
+  end
 end
 
 task(:submodules) do
