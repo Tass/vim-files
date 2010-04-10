@@ -83,7 +83,7 @@ autocmd FileType ruby set iskeyword+=?,!
 " Improved maps for completion
 inoremap <expr> <Down> pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <Up> pumvisible() ? "\<C-p>" : "\<Up>"
-inoremap <expr> <Right> pumvisible() ? "\<C-y>" : "\<Right>"
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 
 let NERDTreeHijackNetrw=1
 
