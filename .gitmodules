@@ -18,7 +18,7 @@
 	url = git://github.com/msanders/snipmate.vim.git
 [submodule "bundle/command-t"]
 	path = bundle/command-t
-	url = git://github.com/Tass/Command-T.git
+	url = git://github.com/wincent/Command-T.git
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = git://github.com/scrooloose/nerdcommenter.git
