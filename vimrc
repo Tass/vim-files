@@ -92,3 +92,6 @@ let g:AutoComplPop_BehaviorKeywordLength = 2
 
 set tags=./tags;
 set grepprg=ack
+
+" Show trailing whitespaces
+let ruby_space_errors = 1
