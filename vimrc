@@ -44,7 +44,6 @@ set ruler " Show ruler
 match LongLineWarning '\%120v.*' " Error format when a line is longer than 120
 set laststatus=2
 
-set nowrap
 set linebreak  " Wrap at word
 
 filetype plugin indent on
