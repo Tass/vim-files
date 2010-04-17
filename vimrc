@@ -93,3 +93,6 @@ set grepprg=ack
 
 " Show trailing whitespaces
 let ruby_space_errors = 1
+
+" NERDCommenter
+map <Leader>x ,c<space>
