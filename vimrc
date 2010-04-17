@@ -3,7 +3,6 @@ call pathogen#runtime_append_all_bundles()
 filetype off
 
 set nocompatible
-set noswapfile
 
 set softtabstop=2
 set shiftwidth=2
