@@ -77,6 +77,7 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete 
 
 autocmd FileType ruby set iskeyword+=?,!
+let g:acp_behaviorKeywordIgnores = ["do"]
 
 " Improved maps for completion
 inoremap <expr> <Down> pumvisible() ? "\<C-n>" : "\<Down>"
