@@ -97,3 +97,6 @@ let ruby_space_errors = 1
 
 " NERDCommenter
 map <Leader>x ,c<space>
+
+" RSpec runner - Thanks to graywh @ #vim
+autocmd BufNewFile,BufRead *_spec.rb nmap <buffer> <Leader>s :exe "!spec %"<CR> | nmap <buffer> <Leader>S :exe "!spec % -l ".line(".")." "<CR>
