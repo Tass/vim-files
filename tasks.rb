@@ -24,6 +24,7 @@ end
 
 task(:command_t) do
   Dir.chdir("bundle/command-t/ruby/command-t") do
+    system "rm *.o"
     system "ruby extconf.rb"
     system "make"
   end
