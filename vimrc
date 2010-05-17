@@ -29,7 +29,6 @@ set smartcase " Ignore case when searching lowercase
 :noremap <Leader>h :split^M^W^W<CR>
 :noremap <Leader>n :NERDTreeToggle<CR>
 :noremap <Leader>i :set list!<CR> " Toggle invisible chars
-map <F5> :!ruby %<CR>
 map <Leader>t :CommandT<CR>
 map <Leader>f :FuzzyFinderTextMate<CR>
 map <Leader>b :FuzzyFinderBuffer<CR>
