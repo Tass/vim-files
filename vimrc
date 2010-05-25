@@ -1,6 +1,6 @@
 call pathogen#runtime_append_all_bundles()
 
-filetype off
+filetype plugin on
 
 set nocompatible
 
@@ -25,8 +25,6 @@ set ignorecase " Ignore case when searching
 set smartcase " Ignore case when searching lowercase
 
 "Vertical split then hop to new buffer
-:noremap <Leader>v :vsp^M^W^W<CR>
-:noremap <Leader>h :split^M^W^W<CR>
 :noremap <Leader>n :NERDTreeToggle<CR>
 :noremap <Leader>i :set list!<CR> " Toggle invisible chars
 map <Leader>t :CommandT<CR>
