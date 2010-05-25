@@ -97,3 +97,9 @@ map <Leader>x ,c<space>
 
 " RSpec runner - Thanks to graywh @ #vim
 autocmd BufNewFile,BufRead *_spec.rb nmap <buffer> <Leader>s :exe "!spec %"<CR> | nmap <buffer> <Leader>S :exe "!spec % -l ".line(".")." "<CR>
+
+" Restore cursor position
+autocmd BufReadPost *
+  \ if line("'\"") > 1 && line("'\"") <= line("$") |
+  \   exe "normal! g`\"" |
+  \ endif
