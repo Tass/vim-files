@@ -17,17 +17,21 @@ task(:symlinks) do
   end
 end
 
-task(:submodules) do
-  system "git submodule init"
-  system "git submodule update"
+PLUGINS_PATH = "~/.vim-plugins"
+
+task(:plugins) do
+  Dir.mkdir(PLUGINS_PATH)
+  Dir.chdir(PLUGINS_PATH) do
+    system "git clone git://github.com/MarcWeber/vim-addon-manager.git"
+  end
 end
 
 task(:command_t) do
-  Dir.chdir("bundle/command-t/ruby/command-t") do
+  Dir.chdir(PLUGINS_PATH + "/Command-T/ruby/command-t") do
     system "rm *.o"
     system "ruby extconf.rb"
     system "make"
   end
 end
 
-task(:install, :symlinks, :submodules, :command_t)
+task(:install, :symlinks, :plugins, :command_t)

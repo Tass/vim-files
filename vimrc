@@ -1,4 +1,5 @@
-call pathogen#runtime_append_all_bundles()
+set runtimepath+=~/.vim-plugins/vim-addon-manager
+call scriptmanager#Activate(['rails','fugitive','vividchalk','The_NERD_tree', 'snipMate', 'Command-T', 'The_NERD_Commenter', 'codepad'])
 
 filetype plugin on
 
@@ -93,7 +94,6 @@ set grepprg=ack
 let ruby_space_errors = 1
 
 " NERDCommenter
-map <Leader>x ,c<space>
 
 " RSpec runner - Thanks to graywh @ #vim
 autocmd BufNewFile,BufRead *_spec.rb nmap <buffer> <Leader>s :exe "!spec %"<CR> | nmap <buffer> <Leader>S :exe "!spec % -l ".line(".")." "<CR>
