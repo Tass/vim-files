@@ -36,4 +36,4 @@ task(:command_t) do
   end
 end
 
-task(:install, :symlinks, :plugins, :command_t)
+task(:install, :symlinks, :plugins)
