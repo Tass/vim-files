@@ -20,7 +20,9 @@ end
 PLUGINS_PATH = File.expand_path("~/.vim-plugins")
 
 task(:plugins) do
-  Dir.mkdir(PLUGINS_PATH)
+  unless Dir.exists?(PLUGINS_PATH)
+    Dir.mkdir(PLUGINS_PATH)
+  end
   Dir.chdir(PLUGINS_PATH) do
     system "git clone git://github.com/MarcWeber/vim-addon-manager.git"
   end
