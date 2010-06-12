@@ -17,7 +17,7 @@ task(:symlinks) do
   end
 end
 
-PLUGINS_PATH = "~/.vim-plugins"
+PLUGINS_PATH = File.expand_path("~/.vim-plugins")
 
 task(:plugins) do
   Dir.mkdir(PLUGINS_PATH)
