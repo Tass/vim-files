@@ -103,3 +103,6 @@ autocmd BufReadPost *
   \ if line("'\"") > 1 && line("'\"") <= line("$") |
   \   exe "normal! g`\"" |
   \ endif
+
+" mkdir -p default for writing
+au BufWrite * !mkdir -p <afile>:h
