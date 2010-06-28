@@ -1,5 +1,5 @@
 set runtimepath+=~/.vim-plugins/vim-addon-manager
-call scriptmanager#Activate(['rails','fugitive','vividchalk','The_NERD_tree', 'snipMate', 'Command-T', 'The_NERD_Commenter', 'codepad'])
+call scriptmanager#Activate(['rails','fugitive','vividchalk','The_NERD_tree', 'snipMate', 'Command-T', 'The_NERD_Commenter', 'codepad', 'AutoComplPop'])
 
 filetype plugin on
 
