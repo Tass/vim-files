@@ -7,7 +7,8 @@ call scriptmanager#Activate([
 \ 'snipMate',
 \ 'Command-T',
 \ 'The_NERD_Commenter',
-\ 'codepad'
+\ 'codepad',
+\ 'bufexplorer.zip',
 \])
 
 filetype plugin on
