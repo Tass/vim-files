@@ -1,5 +1,5 @@
 set gfn=DejaVu\ Sans\ Mono\ 10
-set guioptions-=rlRLbh
+set guioptions=gi
 set stal=2 
 
 set guipty
