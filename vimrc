@@ -9,7 +9,9 @@ call scriptmanager#Activate([
 \ 'The_NERD_Commenter',
 \ 'codepad',
 \ 'bufexplorer.zip',
+\ 'theonevimlib',
 \])
+call theonevimlibsetup#Setup()
 
 filetype plugin on
 
@@ -90,7 +92,6 @@ let g:acp_behaviorKeywordIgnores = ["do"]
 " Improved maps for completion
 inoremap <expr> <Down> pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <Up> pumvisible() ? "\<C-p>" : "\<Up>"
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 
 let NERDTreeHijackNetrw=1
 
