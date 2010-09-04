@@ -1,22 +1,5 @@
 #!/usr/bin/env nake
 
-exp = File.method(:expand_path)
-
-task(:symlinks) do
-  ["gvimrc", "vimrc"].each do |rc|
-    if File.exists?(exp.call("~/.#{rc}"))
-      puts "~./#{rc} exists."
-    else
-      File.symlink(exp.call(rc), exp.call("~/.#{rc}"))
-    end
-  end
-  if File.exists?(exp.call("~/.vim"))
-    puts "~/.vim exists"
-  else
-    File.symlink(exp.call("."), exp.call("~/.vim"))
-  end
-end
-
 PLUGINS_PATH = File.expand_path("~/.vim-plugins")
 
 task(:plugins) do

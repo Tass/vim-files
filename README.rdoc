@@ -1,3 +1,4 @@
 = My VIM Files
 
+Use homesick to install.
 Run <code>./tasks.rb install</code>
