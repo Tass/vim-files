@@ -10,6 +10,8 @@ call scriptmanager#Activate([
 \ 'codepad',
 \ 'bufexplorer.zip',
 \ 'theonevimlib',
+\ 'vim-latex',
+\ 'c.vim',
 \])
 call theonevimlibsetup#Setup()
 
