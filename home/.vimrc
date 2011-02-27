@@ -11,7 +11,7 @@ call scriptmanager#Activate([
 \ 'bufexplorer.zip',
 \ 'theonevimlib',
 \ 'vim-latex',
-\ 'c.vim',
+\ 'c.vim_-_CC_IDE',
 \])
 call theonevimlibsetup#Setup()
 
